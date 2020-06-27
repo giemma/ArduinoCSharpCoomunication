@@ -1,3 +1,3 @@
 # ArduinoCSharpCoomunication
 
-A little example of Arduin and C# communication between serial port
+A little example of Arduino and C# communication between serial port
