@@ -1,0 +1,65 @@
+﻿<Window x:Class="ArduinoSerial.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArduinoSerial"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!-- Connect -->
+        <Grid Grid.Row="0" Grid.Column="0" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Connect" FontWeight="Bold"></Label>
+            <Button Grid.Row="1" Grid.Column="0" x:Name="BtnConnect" Content="Connect sync" Click="BtnConnect_Click"></Button>
+            <TextBlock Grid.Row="2" Grid.Column="0" x:Name="TxtConnectResult" ></TextBlock>
+
+        </Grid>
+
+        <!-- Send -->
+        <Grid Grid.Row="1" Grid.Column="0" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Send data" FontWeight="Bold"></Label>
+            <TextBox Grid.Row="1" Grid.Column="0" x:Name="TxtSend"></TextBox>
+            <Button Grid.Row="2" Grid.Column="0" x:Name="BtnSendOn" Content="Led ON" Click="BtnSendOn_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="0" x:Name="BtnSendOff" Content="Led OFF" Click="BtnSendOff_Click"></Button>
+
+        </Grid>
+
+        <!-- Receive -->
+        <Grid Grid.Row="2" Grid.Column="0" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Receive data" FontWeight="Bold"></Label>
+            <Button Grid.Row="1" Grid.Column="0" x:Name="BtnReceive" Click="BtnReceive_Click">Receive data</Button>
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="TxtReceive"  VerticalScrollBarVisibility="Auto" ></TextBox>
+
+        </Grid>
+    </Grid>
+</Window>
